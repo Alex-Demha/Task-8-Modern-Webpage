@@ -110,17 +110,17 @@ body{
 
 
 
-@media(max-width: 1024px){
+@media (orientation: landscape), (min-width: 1024px){
     .dimSVG{
         filter: brightness(70%);
     }
 }
-@media (min-width: 1024px){
+@media (orientation: landscape), (min-width: 1024px){
     .wrapper{
         .logo{
-            z-index: 102;
-            left: 20px;
-            top: 20px;
+            z-index: 100;
+            left: 44px;
+            top: 0px;
             color: white;
         }
         .clip1{
