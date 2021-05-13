@@ -56,8 +56,8 @@ nav ul {
           transform: translateX(-100%);
   -webkit-transform-origin: left;
           transform-origin: left;
-  background: #40777e;
-  border-right: 2px solid rgba(77, 119, 111, 0.747);
+  background: #c96f4b;
+  border-right: 2px solid #813c33;
   width: 42%;
   height: 99vh;
   list-style: none;
@@ -103,8 +103,11 @@ nav ul li a {
 }
 
 @media (max-width: 1024px) {
-  .dim {
-    background: rgba(77, 119, 111, 0.747) !important;
+  .dim1 {
+    background: #813c33 !important;
+  }
+  .dim2 {
+    background: #5e2b45 !important;
   }
   .dimBody {
     background: #aaa !important;
@@ -165,7 +168,7 @@ nav ul li a {
 }
 
 .wrapper .clip1 {
-  background: rgba(64, 127, 129, 0.76);
+  background: #ff705d;
   -webkit-clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
   width: 50%;
@@ -176,7 +179,7 @@ nav ul li a {
 }
 
 .wrapper .clip2 {
-  background: rgba(64, 127, 129, 0.76);
+  background: #9f5f80;
   -webkit-clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
   width: 100%;
@@ -190,7 +193,7 @@ nav ul li a {
   top: 0;
   right: 0;
   font-size: 3rem;
-  color: rgba(64, 127, 129, 0.76);
+  color: #9f5f80;
   margin: 22px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -251,10 +254,10 @@ nav ul li a {
 
 .wrapper .content .text2 {
   width: 80%;
-  max-width: 360px;
+  max-width: 400px;
 }
 
-@media (orientation: landscape), (min-width: 1024px) {
+@media (max-width: 1024px) {
   .dimSVG {
     -webkit-filter: brightness(70%);
             filter: brightness(70%);

@@ -39,7 +39,7 @@ nav{
         transform: translateX(-100%);
         transform-origin: left;
         background: $navList;
-        border-right: 2px solid $clipcolorDim;
+        border-right: 2px solid $clipColorDim1;
         width: 42%;
         height: 99vh;
         list-style: none;
@@ -87,8 +87,11 @@ nav{
 }
 
 @media(max-width: 1024px){ 
-    .dim{
-        background: $clipcolorDim !important;
+    .dim1{
+        background: $clipColorDim1 !important;
+    }
+    .dim2{
+        background: $clipColorDim2 !important;
     }
     .dimBody{
         background: #aaa !important;
