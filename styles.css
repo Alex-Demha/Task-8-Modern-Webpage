@@ -57,8 +57,7 @@ nav ul {
   -webkit-transform-origin: left;
           transform-origin: left;
   background: #c96f4b;
-  border-right: 2px solid #813c33;
-  width: 42%;
+  width: 45%;
   height: 99vh;
   list-style: none;
   margin-top: 0;
@@ -84,6 +83,8 @@ nav ul li a {
 .reveal ul {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+  -webkit-box-shadow: 0px 2px 8px #813c33;
+          box-shadow: 0px 2px 8px #813c33;
 }
 
 .reveal .close .topLine {
@@ -115,6 +116,13 @@ nav ul li a {
 }
 
 @media (min-width: 1024px) {
+  .wrapper .logo {
+    z-index: 100;
+    left: 44px;
+    top: 0px;
+    color: white;
+    margin-top: 15px;
+  }
   nav button {
     display: none;
   }
@@ -171,8 +179,8 @@ nav ul li a {
   background: #ff705d;
   -webkit-clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
-  width: 50%;
-  height: 30%;
+  width: 150px;
+  height: 120px;
   position: fixed;
   top: 0;
   left: 0;
@@ -253,8 +261,8 @@ nav ul li a {
 }
 
 .wrapper .content .text2 {
-  width: 80%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 380px;
 }
 
 @media (max-width: 1024px) {
@@ -266,16 +274,18 @@ nav ul li a {
 
 @media (orientation: landscape), (min-width: 1024px) {
   .wrapper .logo {
+    margin: 0;
     z-index: 100;
-    left: 44px;
+    left: 16px;
     top: 0px;
     color: white;
+    margin-top: 50px;
   }
   .wrapper .clip1 {
     -webkit-clip-path: polygon(32% 0, 0 100%, 0 100%, 0 0);
             clip-path: polygon(32% 0, 0 100%, 0 100%, 0 0);
     height: 100%;
-    width: 580px;
+    width: 550px;
   }
   .wrapper .clip2 {
     position: fixed;
@@ -300,7 +310,7 @@ nav ul li a {
     position: relative;
     left: 17%;
     width: 35%;
-    padding-top: 200px;
+    padding-top: 160px;
   }
   .wrapper .content .text1 .title {
     position: static;

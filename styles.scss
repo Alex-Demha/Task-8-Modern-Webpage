@@ -29,8 +29,8 @@ body{
     .clip1{
         background: $clipColor1;
         clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
-        width: 50%;
-        height: 30%;
+        width: 150px;
+        height: 120px;
         //border-top-left-radius: 11px;
         position: fixed;
         top: 0;
@@ -43,7 +43,7 @@ body{
         height: 60%;
         //border-top-left-radius: 11px;
         position: fixed;
-        bottom: 0;
+        bottom: 0; 
     }
 // Logo -----------------------------------------------------------------------------------------------
     .logo{
@@ -103,8 +103,9 @@ body{
 
 //SVG ------------------------------------------------------------------------------------------
         .text2{
-            width: 80%;
-            max-width: 400px;
+            width: 100%;
+            max-width: 380px;
+            
         }
     }
 
@@ -120,16 +121,17 @@ body{
 @media (orientation: landscape), (min-width: 1024px){
     .wrapper{
         .logo{
+            margin: 0;
             z-index: 100;
-            left: 44px;
+            left: 16px;
             top: 0px;
             color: white;
+            margin-top: 50px;
         }
         .clip1{
-            
             clip-path: polygon(32% 0, 0 100%, 0 100%, 0 0);
             height: 100%;
-            width: 580px;
+            width: 550px;
         }
         .clip2{
             position: fixed;
@@ -150,7 +152,7 @@ body{
                 position: relative;
                 left: 17%;
                 width: 35%;
-                padding-top: 200px;
+                padding-top: 160px;
                 .title{
                     position: static;
                     text-align: center;
