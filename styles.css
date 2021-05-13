@@ -179,7 +179,7 @@ nav ul li a {
 }
 
 .wrapper .clip2 {
-  background: #9f5f80;
+  background: #aa5c84;
   -webkit-clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
   width: 100%;
@@ -193,7 +193,7 @@ nav ul li a {
   top: 0;
   right: 0;
   font-size: 3rem;
-  color: #9f5f80;
+  color: #aa5c84;
   margin: 22px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
