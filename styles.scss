@@ -45,6 +45,7 @@ body{
     }
 // Logo -----------------------------------------------------------------------------------------------
     .logo{
+        z-index: 100;
         position: absolute;
         top: 0;
         right: 0;
@@ -118,18 +119,25 @@ body{
 }
 }
 @media(max-width: 1024px){
+    @media (orientation:landscape)
+    {.logo{
+        left: 66px !important;
+        top: 0px !important;
+        color: #eee !important;
+        margin-top: 15px !important;
+    }}
     .dimSVG{
         filter: brightness(70%);
     }
 }
+
 @media (orientation: landscape), (min-width: 1024px){
     .wrapper{
         .logo{
             margin: 0;
-            z-index: 100;
-            left: 16px;
+            left: 15px;
             top: 0px;
-            color: white;
+            color: #eee;
             margin-top: 50px;
         }
         .clip1{

@@ -116,13 +116,6 @@ nav ul li a {
 }
 
 @media (min-width: 1024px) {
-  .wrapper .logo {
-    z-index: 100;
-    left: 44px;
-    top: 0px;
-    color: white;
-    margin-top: 15px;
-  }
   nav button {
     display: none;
   }
@@ -197,6 +190,7 @@ nav ul li a {
 }
 
 .wrapper .logo {
+  z-index: 100;
   position: absolute;
   top: 0;
   right: 0;
@@ -271,6 +265,15 @@ nav ul li a {
   }
 }
 
+@media (max-width: 1024px) and (orientation: landscape) {
+  .logo {
+    left: 66px !important;
+    top: 0px !important;
+    color: #eee !important;
+    margin-top: 15px !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .dimSVG {
     -webkit-filter: brightness(70%);
@@ -281,10 +284,9 @@ nav ul li a {
 @media (orientation: landscape), (min-width: 1024px) {
   .wrapper .logo {
     margin: 0;
-    z-index: 100;
-    left: 16px;
+    left: 15px;
     top: 0px;
-    color: white;
+    color: #eee;
     margin-top: 50px;
   }
   .wrapper .clip1 {
