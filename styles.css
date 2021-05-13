@@ -1,0 +1,318 @@
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0;
+}
+
+nav {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+}
+
+nav button {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  z-index: 101;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+nav button .topLine, nav button .middleLine, nav button .bottomLine {
+  position: relative;
+  display: block;
+  background: #eee;
+  mix-blend-mode: hue;
+  width: 40px;
+  height: 5px;
+  border-radius: 12px;
+  -webkit-transition: all cubic-bezier(0.2, 0.2, 0.3, 1.6) 0.4s 0.05s;
+  transition: all cubic-bezier(0.2, 0.2, 0.3, 1.6) 0.4s 0.05s;
+}
+
+nav button .topLine {
+  bottom: 8px;
+}
+
+nav button .bottomLine {
+  bottom: -8px;
+}
+
+nav ul {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background: #40777e;
+  border-right: 2px solid rgba(77, 119, 111, 0.747);
+  width: 42%;
+  height: 99vh;
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+  padding-top: 100px;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+}
+
+nav ul li {
+  margin-left: 0;
+  position: relative;
+}
+
+nav ul li a {
+  padding: 20px 12%;
+  display: block;
+  font-size: 2rem;
+  color: #eee;
+  text-decoration: none;
+}
+
+.reveal ul {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.reveal .close .topLine {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: -5px;
+}
+
+.reveal .close .bottomLine {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 5px;
+}
+
+.reveal .close .middleLine {
+  opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  .dim {
+    background: rgba(77, 119, 111, 0.747) !important;
+  }
+  .dimBody {
+    background: #aaa !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav button {
+    display: none;
+  }
+  nav ul {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    background: transparent;
+    border: none;
+    width: 300px;
+  }
+  nav ul li {
+    margin: 8px;
+    width: 120px;
+  }
+  nav ul li:hover {
+    background: transparent;
+  }
+  nav ul li a {
+    padding: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: none;
+  }
+  nav ul li a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #eee;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  nav ul li a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.wrapper {
+  background: #eee;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wrapper .clip1 {
+  background: rgba(64, 127, 129, 0.76);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
+  width: 50%;
+  height: 30%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.wrapper .clip2 {
+  background: rgba(64, 127, 129, 0.76);
+  -webkit-clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
+  width: 100%;
+  height: 60%;
+  position: fixed;
+  bottom: 0;
+}
+
+.wrapper .logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  color: rgba(64, 127, 129, 0.76);
+  margin: 22px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.wrapper .content {
+  height: 80%;
+  width: 100%;
+  margin-top: 20vh;
+  font-size: 1.4rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .content .text1 {
+  width: 75%;
+  max-width: 480px;
+  text-align: justify;
+  position: relative;
+  left: 20%;
+}
+
+.wrapper .content .text1 p {
+  margin: 0;
+  padding: 5px;
+}
+
+.wrapper .content .text1 .title {
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+.wrapper .content .text1 .title b {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+.wrapper .content .text1 .title p {
+  font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.wrapper .content .text2 {
+  width: 80%;
+  max-width: 360px;
+}
+
+@media (max-width: 1024px) {
+  .dimSVG {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper .logo {
+    z-index: 102;
+    left: 20px;
+    top: 20px;
+    color: white;
+  }
+  .wrapper .clip1 {
+    -webkit-clip-path: polygon(32% 0, 0 100%, 0 100%, 0 0);
+            clip-path: polygon(32% 0, 0 100%, 0 100%, 0 0);
+    height: 100%;
+    width: 580px;
+  }
+  .wrapper .clip2 {
+    position: fixed;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%);
+    height: 100%;
+    width: 50%;
+    right: 0;
+  }
+  .wrapper .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .wrapper .content .text1 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 17%;
+    width: 35%;
+    padding-top: 200px;
+  }
+  .wrapper .content .text1 .title {
+    position: static;
+    text-align: center;
+  }
+  .wrapper .content .text2 {
+    max-width: none;
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1024px) {
+  .wrapper .text2 {
+    width: 45% !important;
+    height: 50% !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

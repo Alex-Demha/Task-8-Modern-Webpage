@@ -1,0 +1,174 @@
+$navList: rgb(64, 119, 126);
+$clipColor: rgba(64, 127, 129, 0.76);
+$clipcolorDim: rgba(77, 119, 111, 0.747);
+
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding:0;
+}
+//NAVBAR---------------------------------------------------------------------------------------------------
+@import 'navbar';
+
+//Page Layout -----------------------------------------------------------------------------------------
+.wrapper{
+    background: #eee;
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    position: absolute;
+    top:0;
+    left:0;
+//Clip Paths -------------------------------------------------------------------------------------------
+    .clip1{
+        background: $clipColor;
+        clip-path: polygon(0 0, 100% 0%, 50% 50%, 0 100%);
+        width: 50%;
+        height: 30%;
+        //border-top-left-radius: 11px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .clip2{
+        background: $clipColor;
+        clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 60%;
+        //border-top-left-radius: 11px;
+        position: fixed;
+        bottom: 0;
+    }
+// Logo -----------------------------------------------------------------------------------------------
+    .logo{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 3rem;
+        color: $clipColor;
+        margin: 22px;
+        width: fit-content;
+    }
+
+//Page Content ---------------------------------------------------------------------------------------
+    .content{
+        height: 80%;
+        width: 100%;
+        margin-top: 20vh;
+        font-size: 1.4rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+
+// Text ------------------------------------------------------------------------------------------
+        .text1{
+            width: 75%;
+            max-width: 480px;
+            text-align: justify;
+            position: relative;
+            left: 20%;
+            
+            p{
+                margin: 0;
+                padding: 5px;
+            }
+            
+            .title{
+                position: relative;
+                text-align: center;
+                display: block;
+                b{
+                    font-size: 2.8rem;
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                    line-height: 3rem;
+                    letter-spacing: 0.2rem;
+                }
+                p{
+                    font-size: 2.2rem;
+                    margin: 0;
+                    padding:0;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+//SVG ------------------------------------------------------------------------------------------
+        .text2{
+            width: 80%;
+            max-width: 360px;
+        }
+    }
+
+}
+
+
+
+@media(max-width: 1024px){
+    .dimSVG{
+        filter: brightness(70%);
+    }
+}
+@media (min-width: 1024px){
+    .wrapper{
+        .logo{
+            z-index: 102;
+            left: 20px;
+            top: 20px;
+            color: white;
+        }
+        .clip1{
+            
+            clip-path: polygon(32% 0, 0 100%, 0 100%, 0 0);
+            height: 100%;
+            width: 580px;
+        }
+        .clip2{
+            position: fixed;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%);
+            height: 100%;
+            width: 50%;
+            right: 0;
+        }
+
+        .content{
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            margin:0;
+            .text1{
+                margin: 0;
+                padding: 0;
+                position: relative;
+                left: 17%;
+                width: 35%;
+                padding-top: 200px;
+                .title{
+                    position: static;
+                    text-align: center;
+                }
+            }
+            .text2{
+                max-width: none;
+                width: 40%;
+                height: 40%;
+            }
+        }
+    }
+
+    @media (min-height: 1024px) {
+        .wrapper{
+            .text2{
+                
+                width: 45% !important;
+                height: 50% !important;
+            }
+        }
+    }
+}
+
